@@ -32,6 +32,7 @@ body {
   font-weight: 300;
   overflow-x: hidden;
   min-height: 100vh;
+  zoom: 1.25;
 }
 
 body::before {
@@ -864,11 +865,11 @@ footer {
   <!-- Projects — RIGHT of photo -->
   <div class="orbital-card oc-3" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})" style="cursor:pointer;">
     <div class="c-title">Projects Underway</div>
-    <p class="c-body" style="margin-bottom:0.75rem;">Side-projects born from curiosity.</p>
+    <p class="c-body" style="margin-bottom:0.75rem;">Built tools and ideas in progress.</p>
     <div style="display:flex;flex-direction:column;gap:0.55rem;flex:1;">
+      <span style="font-size:0.85rem;color:#c9a96e;line-height:1.4;font-family:'Jost',sans-serif;border-top:1px solid rgba(255,255,255,0.07);padding-top:0.5rem;display:block;">AI Agent for Quarterly Earnings Tracking →</span>
       <span style="font-size:0.85rem;color:#c9a96e;line-height:1.4;font-family:'Jost',sans-serif;border-top:1px solid rgba(255,255,255,0.07);padding-top:0.5rem;display:block;">Valuation Atlas: a country-by-country equity guide →</span>
       <span style="font-size:0.85rem;color:#c9a96e;line-height:1.4;font-family:'Jost',sans-serif;border-top:1px solid rgba(255,255,255,0.07);padding-top:0.5rem;display:block;">Mental Models for Investors: a living document →</span>
-      <span style="font-size:0.85rem;color:#c9a96e;line-height:1.4;font-family:'Jost',sans-serif;border-top:1px solid rgba(255,255,255,0.07);padding-top:0.5rem;display:block;">Southeast Asia Market Pulse: a weekly data brief →</span>
     </div>
     <span class="c-arrow" style="margin-top:auto;padding-top:0.75rem;">View all ↓</span>
   </div>
@@ -1037,6 +1038,42 @@ footer {
       Beyond the day job — projects driven by genuine curiosity. Each one starts with a question that won't leave me alone.
     </p>
     <div style="display:flex;flex-direction:column;gap:0.75rem;margin-top:1.25rem;">
+
+      <!-- Built project — full layout -->
+      <div style="display:flex;gap:1.5rem;align-items:stretch;border:1px solid rgba(201,169,110,0.2);border-left:3px solid rgba(201,169,110,0.5);border-radius:8px;padding:1.35rem 1.25rem;background:rgba(201,169,110,0.04);">
+
+        <!-- Left: text -->
+        <div style="flex:1;min-width:0;">
+          <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem;flex-wrap:wrap;">
+            <span style="font-family:'Jost',sans-serif;font-size:0.6rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;background:rgba(201,169,110,0.15);color:#7a6448;padding:0.18rem 0.55rem;border-radius:20px;border:1px solid rgba(201,169,110,0.3);">Built</span>
+            <span style="font-family:'Jost',sans-serif;font-size:0.7rem;color:#6b7280;letter-spacing:0.04em;">Python · Claude API</span>
+          </div>
+          <div style="font-family:'Jost',sans-serif;font-size:0.95rem;font-weight:600;color:#1a1d24;margin-bottom:1.1rem;line-height:1.35;">AI Agent for Quarterly Earnings Tracking</div>
+          <div style="display:flex;flex-direction:column;gap:0.8rem;">
+            <div>
+              <div style="font-family:'Jost',sans-serif;font-size:0.6rem;font-weight:700;letter-spacing:0.13em;text-transform:uppercase;color:#6b7280;margin-bottom:0.3rem;">Problem</div>
+              <div style="font-family:'Jost',sans-serif;font-size:0.82rem;font-weight:400;color:#1a1d24;line-height:1.65;">Manual tracking of quarterly earnings required downloading research reports, writing notes, and drafting a distribution email to the team — taking ~45 minutes per company.</div>
+            </div>
+            <div>
+              <div style="font-family:'Jost',sans-serif;font-size:0.6rem;font-weight:700;letter-spacing:0.13em;text-transform:uppercase;color:#6b7280;margin-bottom:0.3rem;">Solution</div>
+              <div style="font-family:'Jost',sans-serif;font-size:0.82rem;font-weight:400;color:#1a1d24;line-height:1.65;">Using the Claude API and Python, I built an AI agent that generates earnings update notes and automatically prepares a team email with the notes, transcript, and relevant broker research attached.</div>
+            </div>
+            <div>
+              <div style="font-family:'Jost',sans-serif;font-size:0.6rem;font-weight:700;letter-spacing:0.13em;text-transform:uppercase;color:#6b7280;margin-bottom:0.3rem;">Impact</div>
+              <div style="font-family:'Jost',sans-serif;font-size:0.82rem;font-weight:400;color:#1a1d24;line-height:1.65;">Reduced from ~45 minutes to under 1 minute per company — saving ~20 hours per quarter, ~80 hours per year personally, and ~240 hours per year across the team.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: video placeholder -->
+        <div style="width:210px;flex-shrink:0;border:1.5px dashed rgba(201,169,110,0.28);border-radius:8px;background:rgba(201,169,110,0.02);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.5rem;min-height:200px;">
+          <div style="font-family:'Jost',sans-serif;font-size:1.6rem;color:rgba(201,169,110,0.22);">▶</div>
+          <div style="font-family:'Jost',sans-serif;font-size:0.62rem;color:rgba(26,29,36,0.18);text-align:center;letter-spacing:0.08em;text-transform:uppercase;">Demo video</div>
+        </div>
+
+      </div>
+
+      <!-- Coming soon items -->
       <div style="display:flex;justify-content:space-between;align-items:center;padding:0.85rem 1rem;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:8px;">
         <span style="font-family:'Jost',sans-serif;font-size:0.88rem;color:#e8e9eb;">Valuation Atlas: a country-by-country equity guide</span>
         <span style="color:rgba(201,169,110,0.4);font-size:0.85rem;font-family:'Jost',sans-serif;">Coming soon</span>
@@ -1049,6 +1086,7 @@ footer {
         <span style="font-family:'Jost',sans-serif;font-size:0.88rem;color:#e8e9eb;">Southeast Asia Market Pulse: a weekly data brief</span>
         <span style="color:rgba(201,169,110,0.4);font-size:0.85rem;font-family:'Jost',sans-serif;">Coming soon</span>
       </div>
+
     </div>
   </div>
 
