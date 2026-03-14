@@ -827,6 +827,46 @@ footer {
 @media (max-width:640px) {
   .books-grid { grid-template-columns:1fr; gap:2rem 0; }
 }
+
+/* ── Mobile improvements ── */
+@media (max-width:900px) {
+
+  /* Detail cards: tighter padding */
+  .detail-card { padding:1.35rem 1.1rem; }
+
+  /* Section titles: scale down */
+  .d-title { font-size:1.5rem; }
+
+  /* AI Agent card: stack vertically */
+  .proj-ai-layout {
+    flex-direction:column !important;
+    gap:1.1rem !important;
+  }
+
+  /* AI Agent video: full width, fixed height */
+  .proj-ai-video {
+    width:100% !important;
+    height:220px !important;
+    flex-shrink:unset !important;
+  }
+
+  /* Coming soon rows: let label wrap gracefully */
+  .proj-soon-row {
+    flex-wrap:wrap;
+    gap:0.4rem;
+  }
+}
+
+@media (max-width:480px) {
+  /* Tighter card padding on very small screens */
+  .detail-card { padding:1.1rem 0.9rem; }
+
+  /* AI Agent video: slightly shorter on tiny screens */
+  .proj-ai-video { height:190px !important; }
+
+  /* Smaller body text in project card for readability */
+  .d-body { font-size:0.82rem; }
+}
 </style>
 </head>
 <body>
@@ -1009,15 +1049,15 @@ footer {
       Periodic essays and investment ideas for the curious-minded. No algorithm — just thoughtful writing sent when it's ready, on Substack.
     </p>
     <div style="display:flex;flex-direction:column;gap:0.75rem;margin-top:1.25rem;">
-      <a href="https://substack.com/@equityechos" target="_blank" rel="noopener" style="display:flex;justify-content:space-between;align-items:center;padding:0.85rem 1rem;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:8px;text-decoration:none;color:inherit;transition:border-color 0.2s,background 0.2s;" onmouseover="this.style.borderColor='rgba(201,169,110,0.4)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'">
+      <a href="https://substack.com/@equityechos" target="_blank" rel="noopener" style="display:flex;justify-content:space-between;align-items:center;padding:0.85rem 1rem;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:8px;flex-wrap:wrap;gap:0.3rem;text-decoration:none;color:inherit;transition:border-color 0.2s,background 0.2s;" onmouseover="this.style.borderColor='rgba(201,169,110,0.4)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'">
         <span style="font-family:'Jost',sans-serif;font-size:0.88rem;color:#e8e9eb;">Grab: a regional superapp yet to become super</span>
         <span style="color:#c9a96e;font-size:0.75rem;">Read →</span>
       </a>
-      <a href="https://substack.com/@equityechos" target="_blank" rel="noopener" style="display:flex;justify-content:space-between;align-items:center;padding:0.85rem 1rem;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:8px;text-decoration:none;color:inherit;transition:border-color 0.2s,background 0.2s;" onmouseover="this.style.borderColor='rgba(201,169,110,0.4)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'">
+      <a href="https://substack.com/@equityechos" target="_blank" rel="noopener" style="display:flex;justify-content:space-between;align-items:center;padding:0.85rem 1rem;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:8px;flex-wrap:wrap;gap:0.3rem;text-decoration:none;color:inherit;transition:border-color 0.2s,background 0.2s;" onmouseover="this.style.borderColor='rgba(201,169,110,0.4)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'">
         <span style="font-family:'Jost',sans-serif;font-size:0.88rem;color:#e8e9eb;">Robotaxis: once a fiction movie, slowly a reality</span>
         <span style="color:#c9a96e;font-size:0.75rem;">Read →</span>
       </a>
-      <a href="https://substack.com/@equityechos" target="_blank" rel="noopener" style="display:flex;justify-content:space-between;align-items:center;padding:0.85rem 1rem;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:8px;text-decoration:none;color:inherit;transition:border-color 0.2s,background 0.2s;" onmouseover="this.style.borderColor='rgba(201,169,110,0.4)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'">
+      <a href="https://substack.com/@equityechos" target="_blank" rel="noopener" style="display:flex;justify-content:space-between;align-items:center;padding:0.85rem 1rem;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:8px;flex-wrap:wrap;gap:0.3rem;text-decoration:none;color:inherit;transition:border-color 0.2s,background 0.2s;" onmouseover="this.style.borderColor='rgba(201,169,110,0.4)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'">
         <span style="font-family:'Jost',sans-serif;font-size:0.88rem;color:#e8e9eb;">SEA Ltd: the best that others don't acknowledge</span>
         <span style="color:#c9a96e;font-size:0.75rem;">Read →</span>
       </a>
@@ -1040,7 +1080,7 @@ footer {
     <div style="display:flex;flex-direction:column;gap:0.75rem;margin-top:1.25rem;">
 
       <!-- Built project — full layout -->
-      <div style="display:flex;gap:1.5rem;align-items:stretch;border:1px solid rgba(201,169,110,0.2);border-left:3px solid rgba(201,169,110,0.5);border-radius:8px;padding:1.35rem 1.25rem;background:rgba(201,169,110,0.04);">
+      <div class="proj-ai-layout" style="display:flex;gap:1.5rem;align-items:stretch;border:1px solid rgba(201,169,110,0.2);border-left:3px solid rgba(201,169,110,0.5);border-radius:8px;padding:1.35rem 1.25rem;background:rgba(201,169,110,0.04);">
 
         <!-- Left: text -->
         <div style="flex:1;min-width:0;">
@@ -1066,22 +1106,22 @@ footer {
         </div>
 
         <!-- Right: demo video -->
-        <video controls style="width:356px;height:356px;flex-shrink:0;border-radius:8px;object-fit:cover;border:2px solid #1a1d24;box-shadow:0 2px 16px rgba(0,0,0,0.12);" preload="metadata">
+        <video class="proj-ai-video" controls style="width:356px;height:356px;flex-shrink:0;border-radius:8px;object-fit:cover;border:2px solid #1a1d24;box-shadow:0 2px 16px rgba(0,0,0,0.12);" preload="metadata">
           <source src="AI Agent Earnings Analysis Demo Video.mp4" type="video/mp4">
         </video>
 
       </div>
 
       <!-- Coming soon items -->
-      <div style="display:flex;justify-content:space-between;align-items:center;padding:0.85rem 1rem;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:8px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:0.85rem 1rem;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:8px;flex-wrap:wrap;gap:0.3rem;">
         <span style="font-family:'Jost',sans-serif;font-size:0.88rem;color:#e8e9eb;">Valuation Atlas: a country-by-country equity guide</span>
         <span style="color:rgba(201,169,110,0.4);font-size:0.85rem;font-family:'Jost',sans-serif;">Coming soon</span>
       </div>
-      <div style="display:flex;justify-content:space-between;align-items:center;padding:0.85rem 1rem;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:8px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:0.85rem 1rem;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:8px;flex-wrap:wrap;gap:0.3rem;">
         <span style="font-family:'Jost',sans-serif;font-size:0.88rem;color:#e8e9eb;">Mental Models for Investors: a living document</span>
         <span style="color:rgba(201,169,110,0.4);font-size:0.85rem;font-family:'Jost',sans-serif;">Coming soon</span>
       </div>
-      <div style="display:flex;justify-content:space-between;align-items:center;padding:0.85rem 1rem;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:8px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:0.85rem 1rem;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:8px;flex-wrap:wrap;gap:0.3rem;">
         <span style="font-family:'Jost',sans-serif;font-size:0.88rem;color:#e8e9eb;">Southeast Asia Market Pulse: a weekly data brief</span>
         <span style="color:rgba(201,169,110,0.4);font-size:0.85rem;font-family:'Jost',sans-serif;">Coming soon</span>
       </div>
